@@ -1,69 +1,62 @@
-<div align="center">
+# doublets-web
 
-  <h1><code>wasm-pack-template</code></h1>
+[![CI/CD Pipeline](https://github.com/linksplatform/doublets-web/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/linksplatform/doublets-web/actions/workflows/release.yml?query=branch%3Amaster)
+[![npm package](https://img.shields.io/npm/v/doublets-web.svg)](https://www.npmjs.com/package/doublets-web)
+[![GitHub Release](https://img.shields.io/github/v/release/linksplatform/doublets-web.svg)](https://github.com/linksplatform/doublets-web/releases)
+[![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/linksplatform/doublets-web#license)
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+WebAssembly bindings for the LinksPlatform [doublets](https://github.com/linksplatform/doublets-rs) associative storage library.
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+## Installation
 
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
-
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
-</div>
-
-## About
-
-[**📚 Read this template tutorial! 📚**][template-docs]
-
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
-
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
-
-## 🚴 Usage
-
-### 🐑 Use `cargo generate` to Clone this Template
-
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
-
-```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
+```sh
+npm install doublets-web
 ```
 
-### 🛠️ Build with `wasm-pack build`
+## Usage
 
+```js
+import { Link, LinksConstants, UnitedLinks } from "doublets-web";
+
+const constants = new LinksConstants();
+const links = new UnitedLinks(constants);
+
+const link = links.create();
+links.update(link, link, link);
+
+const any = links.constants.any;
+const count = links.count(new Link(any, link, link));
+
+console.log(`Stored links: ${count}`);
 ```
-wasm-pack build
+
+## Development
+
+This package is built with stable Rust and `wasm-pack`.
+
+```sh
+rustup target add wasm32-unknown-unknown
+cargo check --locked --tests --all-features
+cargo clippy --locked --tests --all-features -- -D warnings
+wasm-pack build --release --target bundler --out-dir pkg
+wasm-pack test --node
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+## Publishing
 
-```
-wasm-pack test --headless --firefox
-```
+The release workflow publishes the generated `pkg` package to npm from `.github/workflows/release.yml` using npm trusted publishing.
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+The npm package trusted publisher should be configured with:
 
-```
-wasm-pack publish
-```
+- Organization/user: `linksplatform`
+- Repository: `doublets-web`
+- Workflow filename: `release.yml`
 
-## 🔋 Batteries Included
+The workflow uses GitHub Actions OIDC (`id-token: write`) and `npm publish` from the generated package directory. npm trusted publishing automatically adds provenance for supported public packages.
 
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
-* [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
-  for small code size.
+## License
+
+Licensed under either of:
+
+- Apache License, Version 2.0 ([LICENSE_APACHE](LICENSE_APACHE))
+- MIT license ([LICENSE_MIT](LICENSE_MIT))
