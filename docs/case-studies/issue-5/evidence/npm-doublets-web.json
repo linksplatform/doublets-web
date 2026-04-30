@@ -1,0 +1,59 @@
+{
+  "_id": "doublets-web@0.1.0-beta.3",
+  "_rev": "6-487a50c564cad8e89537be5d87b31a45",
+  "name": "doublets-web",
+  "dist-tags": {
+    "latest": "0.1.0-beta.3"
+  },
+  "versions": [
+    "0.1.0-beta.1",
+    "0.1.0-beta.2",
+    "0.1.0-beta.3",
+    "0.1.0"
+  ],
+  "time": {
+    "created": "2021-12-10T16:40:00.790Z",
+    "modified": "2026-04-30T04:47:19.151Z",
+    "0.1.0": "2021-12-10T16:40:01.024Z",
+    "0.1.0-beta.1": "2021-12-10T19:12:35.413Z",
+    "0.1.0-beta.2": "2021-12-10T19:25:10.306Z",
+    "0.1.0-beta.3": "2021-12-10T19:30:11.628Z"
+  },
+  "description": "<div align=\"center\">",
+  "maintainers": [
+    "uselessgoddess <dodickgod@gmail.com>"
+  ],
+  "readmeFilename": "README.md",
+  "_contentLength": 11130,
+  "version": "0.1.0-beta.3",
+  "dist": {
+    "shasum": "12bfcb01e3611845cdc37c67bad544a79c97ef52",
+    "tarball": "https://registry.npmjs.org/doublets-web/-/doublets-web-0.1.0-beta.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-53CmgkzL1EkYpU/kNC69akLTrdhUo3d+pAiYIbpmpXBv6Drlsajckz3c88tkqfKiGvMQ6WccvcoliVCK5ZVXvw==",
+    "signatures": [
+      {
+        "sig": "MEUCIHeS7jrf/l9fD2I9IxOark5MlqnAlJxrKJkCGNwBcrU9AiEApTkPsQnIbW38UynGZMv37wkWi0zmDTUsGYfWXVzf5DA=",
+        "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+      }
+    ],
+    "unpackedSize": 77298,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhs6rDCRA9TVsSAnZWagAADlgP/ROj6bQYIPXapVmoDLGH\nBqNHDgSkGARv7SPPq5hBHmOfUqoa4bYzMldqUD/F9np0pxZb/YYanpOXgbe1\n2nLDQ62cnD/6qwimb1rAorSelY+qDbMdt/P8LXHnvfCjwf97TVbAxqWV2SY5\n4pg2WFndIABamsHx51ZJtIh4zVKEmPZutER6eJEoYwsJFah2DNyTs/mxuc+O\n18eAr7gtnF/Wh6sJu8N9aEdD/Il2Z0EKerjYjFbEc8XoN8NAp6R05cAspp6S\nWfAAaWAfovNaB7wzP0TSO2d/MYJAXpRb39+eagVPrOfC9z+iON+eHjfLggmw\nVw8mLWfewDG5UeHn7jC3LQ9kTUYgSVvLq1guCUxFBbuvQs56tOpPEEzDOF3h\n3m9WOSrKXoNBumq49d6E5o4/ufa3mHGNTd4iFeNhgBOpZ00RttaRS3Id9KaG\ntx6Vl9hHwVbO7UgUUbJWiWr08aiOymFIPTWPIo17tAc8SJFIO09MEjMPPHPl\nnwzwjUT+hZkEM+mWsqPeRH/JBmAExI371g1gwgSPaVrV4c30F1MaYMboo4jH\n/0zXAuZ+ftHLtS6B7GCbg4e1YCbJMT96/S65busr9pCt4KTwE1EbrlCNSy84\nKU9lGCkO0ZlZIYsLjk6v8u8PJcqsaY1uvKvYtPUvFNDtlCC1A0qvtzQ4dm99\nWkh+\r\n=QH5R\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "types": "doublets_web.d.ts",
+  "module": "doublets_web.js",
+  "gitHead": "60533ce77499d5836a36518ce08f207bff158074",
+  "_npmUser": "uselessgoddess <dodickgod@gmail.com>",
+  "_npmVersion": "8.1.2",
+  "directories": {},
+  "sideEffects": false,
+  "_nodeVersion": "16.13.1",
+  "collaborators": [
+    "uselessgoddess"
+  ],
+  "_hasShrinkwrap": false,
+  "_npmOperationalInternal": {
+    "tmp": "tmp/doublets-web_0.1.0-beta.3_1639164611425_0.6455985918373979",
+    "host": "s3://npm-registry-packages"
+  }
+}

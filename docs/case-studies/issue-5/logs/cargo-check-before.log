@@ -1,0 +1,14 @@
+warning: unused manifest key: dependencies.doublets.packages
+    Updating crates.io index
+    Updating git repository `https://github.com/linksplatform/Data.Doublets`
+    Updating git submodule `https://github.com/linksplatform/doublets-rs`
+error: failed to get `doublets` as a dependency of package `doublets-web v0.1.0-beta.3 (/tmp/gh-issue-solver-1777538090812)`
+
+Caused by:
+  failed to load source for dependency `doublets`
+
+Caused by:
+  Unable to update https://github.com/linksplatform/Data.Doublets
+
+Caused by:
+  Could not find Cargo.toml in `/home/box/.cargo/git/checkouts/data.doublets-3bd839e51b878efd/f8c521e`

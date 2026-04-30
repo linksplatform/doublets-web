@@ -1,0 +1,80 @@
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1746 } Some("serde_core::ser::Serializer::collect_map::hb46401acd1ea8496")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5716 } Some("core::str::validations::next_code_point::h74631596cd1ebcee")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 562 } Some("doublets::mem::unit::store::Store<T,M,TS,TT,TU>::init::h9317beae51702a08")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 231 } Some("<test::formatters::pretty::PrettyFormatter<T> as test::formatters::OutputFormatter>::write_discovery_finish::h11c429db3cfeb6de")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 232 } Some("<test::formatters::pretty::PrettyFormatter<T> as test::formatters::OutputFormatter>::write_discovery_finish::h7534b9456d32f850")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1437 } Some("<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_str::h6c19f259f7894016")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1495 } Some("wasm_bindgen_test::__rt::criterion::estimate::_::<impl serde_core::ser::Serialize for wasm_bindgen_test::__rt::criterion::estimate::Estimates>::serialize::h5ad3b156960b1309")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2550 } Some("core::iter::adapters::peekable::Peekable<I>::next_if::h46c648c7d6029740")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2553 } Some("core::iter::adapters::peekable::Peekable<I>::next_if::hc4fa42cf3b1f57a3")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2558 } Some("core::iter::adapters::peekable::Peekable<I>::next_if::hd5be1f14e064520f")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2559 } Some("core::iter::adapters::peekable::Peekable<I>::next_if::h9113eb280bdab981")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2560 } Some("core::iter::adapters::peekable::Peekable<I>::next_if::h3e20818e4e1c87f5")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 846 } Some("doublets_web::UnitedLinks::each::{{closure}}::h253e997a47b9ba96")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1369 } Some("<serde_json::de::SeqAccess<R> as serde_core::de::SeqAccess>::next_element_seed::h2a8967c712c0f242")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1511 } Some("<wasm_bindgen_test::__rt::criterion::estimate::_::<impl serde_core::de::Deserialize for wasm_bindgen_test::__rt::criterion::estimate::ConfidenceInterval>::deserialize::__Visitor as serde_core::de::Visitor>::visit_seq::hb20f903776b8eb80")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 239 } Some("<core::str::pattern::StrSearcher as core::str::pattern::Searcher>::next_match::h4dfa56fc99ed52ca")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2683 } Some("<serde_json::error::ErrorCode as core::fmt::Display>::fmt::h9490365706f2b9f0")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 6026 } Some("compiler_builtins::math::libm_math::fmod::fmod::hdd96ffb56df7b981")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 339 } Some("test::bench::fmt_thousands_sep::hf599e8878ba4e5f7")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1559 } Some("alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Internal>,alloc::collections::btree::node::marker::Edge>::insert::hf4b7edcf9c8a4ed2")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5930 } Some("core::fmt::Formatter::pad_formatted_parts::hba4ee7ec573a5615")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1396 } Some("serde_json::de::Deserializer<R>::ignore_integer::h9e5c9ad73a6d9a6e")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 829 } Some("core::option::Option<T>::map_or::hfddfde38dc4f3503")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5890 } Some("alloc::string::String::from_utf8_lossy::h782e772ad142467d")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1438 } Some("<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_str::ha6742e3ae4d21109")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1524 } Some("js_sys::futures::future_to_promise::{{closure}}::{{closure}}::hea0c8bd2a7029e84")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5951 } Some("<core::fmt::builders::PadAdapter as core::fmt::Write>::write_str::hca0c70a1f76e04ee")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5972 } Some("core::num::bignum::Big32x40::mul_pow2::he540d63cbba9f9ce")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1431 } Some("<serde_json::de::SeqAccess<R> as serde_core::de::SeqAccess>::next_element_seed::has_next_element::h89da70ae5a176943")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 943 } Some("alloc::rc::Rc<T,A>::try_unwrap::h44316db43c9501b9")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1329 } Some("serde_core::de::MapAccess::next_entry_seed::h3bb4b9cfd5b9fff5")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 6025 } Some("compiler_builtins::math::libm_math::support::modular::linear_mul_reduction::hc9e9016b89de2915")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5902 } Some("core::fmt::write::h31474238f266a14a")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 337 } Some("test::cli::get_test_threads::h1aeeaa0e248cb364")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5964 } Some("core::fmt::Formatter::write_formatted_parts::h6b7de073ecd0899c")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2610 } Some("alloc::raw_vec::RawVecInner<A>::try_allocate_in::hdaec316821775b1a")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2628 } Some("alloc::raw_vec::RawVecInner<A>::try_allocate_in::h0cf80e65cafb1c45")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5729 } Some("alloc::raw_vec::RawVecInner<A>::try_allocate_in::h93b557d7811b1869")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2744 } Some("serde_json::read::SliceRead::position_of_index::h08a404e4ebf43aed")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1377 } Some("<serde_json::de::SeqAccess<R> as serde_core::de::SeqAccess>::next_element_seed::h630c1f7327706b1a")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1622 } Some("alloc::collections::btree::map::entry::VacantEntry<K,V,A>::insert_entry::h3867daa6c048afd1")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 238 } Some("<alloc::vec::Vec<T> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter::heda68daddb95ec04")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2129 } Some("<core::iter::adapters::chain::Chain<A,B> as core::iter::traits::iterator::Iterator>::size_hint::ha105adf2cf5c377b")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 574 } Some("doublets_web::UnitedLinks::new::h5556f52de81a4dde")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 304 } Some("core::slice::sort::shared::smallsort::sort4_stable::h1ea4bb869a783527")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 600 } Some("<doublets_web::LinksConstants as wasm_bindgen::convert::traits::FromWasmAbi>::from_abi::hb616062829fc465f")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 315 } Some("<core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match::hec4fe28072ff4c9e")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1718 } Some("alloc::collections::btree::navigate::LazyLeafRange<BorrowType,K,V>::init_front::h8785f75cc75fa550")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1719 } Some("alloc::collections::btree::navigate::LazyLeafRange<BorrowType,K,V>::init_front::hb8526e26dbb3a499")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1564 } Some("alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<BorrowType,K,V,Type>>::find_key_index::ha599b0f135b4f64f")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5922 } Some("core::fmt::num::imp::<impl u64>::_fmt_inner::h21f77f4c8510767c")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 244 } Some("std::sync::mpmc::waker::SyncWaker::notify::h034388f80f214699")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 2135 } Some("core::str::<impl str>::lines::h0f7fe8e347b9a181")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 184 } Some("test::formatters::terse::TerseFormatter<T>::write_test_name::h13e0cd1f37efd7e6")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 189 } Some("test::formatters::terse::TerseFormatter<T>::write_test_name::h018c75d0f063d712")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 212 } Some("test::formatters::pretty::PrettyFormatter<T>::write_test_name::h0fb064669adb8dd7")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 216 } Some("test::formatters::pretty::PrettyFormatter<T>::write_test_name::h4130d0b7e21d94b1")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1565 } Some("alloc::collections::btree::navigate::<impl alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<BorrowType,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::next_kv::hfbdcb786e3f87405")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 1532 } Some("alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Leaf>::push_with_handle::h0a0f54c9cab4bc89")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 389 } Some("getopts::find_opt::hbb9d4de140ffe023")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 5917 } Some("core::fmt::num::imp::<impl u32>::_fmt_inner::he63902c806bd0202")
+[2026-04-30T09:01:40Z DEBUG walrus::module::functions] emit function Id { idx: 510 } Some("doublets::mem::unit::generic::targets_recursionless_size_balanced_tree::each_usages_core::hb43a7075e7be64bf")
+[2026-04-30T09:01:40Z DEBUG walrus::module::data] emit data section
+[2026-04-30T09:01:40Z DEBUG walrus::module] emit name section
+[2026-04-30T09:01:40Z DEBUG walrus::module::producers] emit producers section
+[2026-04-30T09:01:41Z DEBUG walrus::module] emitting custom section target_features
+[2026-04-30T09:01:41Z DEBUG walrus::module] emission finished
+running 1 test
+test united_links_crud_round_trip ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 filtered out; finished in 0.04s
+
+   Doc-tests doublets_web
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[INFO  wasm_pack::command::test] Finished running tests in node.
+[INFO  wasm_pack::command::test] Done in 1.79s.

@@ -1,0 +1,12 @@
+doublets = "0.3.0"                       # Doublets (links) data structure implementation. 
+doublets-decorators = "0.1.0-alpha.3"    # Decorators for doublets 
+peacoqc-cli = "0.2.4"                    # Command-line tool for PeacoQC flow cytometry quality control
+network-isomorphism-solver = "0.2.0"     # Network isomorphism solver using Links Theory - determines if two networks are structu…
+peacoqc-rs = "0.2.4"                     # PeacoQC quality control algorithms for flow cytometry
+jsbsim-ffi = "0.1.4"                     # A wrapper around the C++ JSBSim library to allow its use in rust
+platform-data = "2.0.0"                  # Data types and traits for the LinksPlatform
+platform-mem = "0.3.0"                   # Memory for linksplatform 
+platform-num = "0.8.0"                   # Numbers for linksplatform 
+platform-trees = "0.3.4"                 # Trees methods for linksplatform 
+... and 4 crates more (use --limit N to see more)
+note: to learn more about a package, run `cargo info <name>`
