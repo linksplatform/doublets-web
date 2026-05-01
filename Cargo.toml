@@ -1,8 +1,18 @@
 [package]
 name = "doublets-web"
-version = "0.1.0-beta.3"
-authors = ["uselessgoddess"]
+version = "0.1.1"
+authors = [
+    "uselessgoddess",
+    "Linksplatform Team <linksplatformtechnologies@gmail.com>",
+]
 edition = "2021"
+rust-version = "1.85"
+description = "WebAssembly bindings for the LinksPlatform Doublets associative storage library."
+readme = "README.md"
+repository = "https://github.com/linksplatform/doublets-web"
+license = "MIT OR Apache-2.0"
+keywords = ["associative", "doublets", "linksplatform", "wasm", "webassembly"]
+categories = ["api-bindings", "data-structures", "wasm"]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -11,16 +21,14 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-doublets = { git = "https://github.com/linksplatform/Data.Doublets", packages = "doublets" }
-getrandom = { version = "0.2.3", features = ["js"] }
-
-js-sys = "0.3.55"
-wasm-bindgen = { version = "0.2.63", features = ["nightly"] }
-console_error_panic_hook = { version = "0.1.6", optional = true }
+doublets = "0.3.0"
+js-sys = "0.3"
+wasm-bindgen = "0.2"
+console_error_panic_hook = { version = "0.1", optional = true }
 wee_alloc = { version = "0.4.5", optional = true }
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.13"
+wasm-bindgen-test = "0.3"
 
 [profile.release]
 opt-level = 3

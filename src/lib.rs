@@ -1,8 +1,11 @@
-#![feature(ptr_internals)]
-
 mod utils;
 
-use js_sys::Function;
+use doublets::{
+    data::{Flow, LinksConstants as RealConstants},
+    mem::Global,
+    unit::{LinkPart, Store},
+    Doublets, Links as RealLinks,
+};
 use std::ops::RangeInclusive;
 use wasm_bindgen::prelude::*;
 
@@ -12,14 +15,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 type TLink = u32;
 
-use doublets::doublets::mem::splited;
-use doublets::doublets::mem::united;
-use doublets::doublets::ILinks;
-use doublets::mem::HeapMem;
-
-use doublets::doublets::data::LinksConstants as RealConstants;
-use doublets::doublets::mem::united::Links;
-use doublets::doublets::Link as RealLink;
+type RealStore = Store<TLink, Global<LinkPart<TLink>>>;
 
 #[wasm_bindgen]
 #[derive(Copy, Clone, Debug)]
@@ -47,6 +43,7 @@ pub struct LinksConstants {
     pub skip: TLink,
     pub any: TLink,
     pub itself: TLink,
+    pub error: TLink,
     pub internal_range: LinkRange,
     pub external_range: Option<LinkRange>,
 }
@@ -65,6 +62,7 @@ pub mod const_utils {
             skip: real.skip,
             any: real.any,
             itself: real.itself,
+            error: real.error,
             internal_range: LinkRange(*real.internal_range.start(), *real.internal_range.end()),
             external_range: (real.external_range.map(|e| LinkRange(*e.start(), *e.end()))),
         }
@@ -81,9 +79,16 @@ pub mod const_utils {
             skip: _self.skip,
             any: _self.any,
             itself: _self.itself,
+            error: _self.error,
             internal_range: RangeInclusive::new(_self.internal_range.0, _self.internal_range.1),
             external_range: (_self.external_range.map(|e| RangeInclusive::new(e.0, e.1))),
         }
+    }
+}
+
+impl Default for LinksConstants {
+    fn default() -> Self {
+        Self::new()
     }
 }
 
@@ -122,6 +127,7 @@ impl LinksConstants {
         const_utils::from(RealConstants::via_only_external(false))
     }
 
+    #[allow(clippy::should_implement_trait)]
     pub fn clone(&self) -> Self {
         Clone::clone(self)
     }
@@ -137,7 +143,7 @@ impl Link {
 
 #[wasm_bindgen]
 pub struct UnitedLinks {
-    base: united::Links<TLink, HeapMem>,
+    base: RealStore,
 }
 
 #[wasm_bindgen]
@@ -145,10 +151,11 @@ impl UnitedLinks {
     #[wasm_bindgen(constructor)]
     // TODO: Make options constructor
     pub fn new(constants: Option<LinksConstants>) -> Result<UnitedLinks, JsValue> {
+        utils::set_panic_hook();
         Ok(Self {
-            base: united::Links::<_, _>::with_constants(
-                HeapMem::new().map_err(|e| e.to_string())?,
-                constants.map_or(RealConstants::default(), |c| const_utils::to(c)),
+            base: Store::<_, _>::with_constants(
+                Global::new(),
+                constants.map_or(RealConstants::default(), const_utils::to),
             )
             .map_err(|e| e.to_string())?,
         })
@@ -159,12 +166,12 @@ impl UnitedLinks {
     }
 
     #[wasm_bindgen(getter)]
-    pub fn constants(&mut self) -> LinksConstants {
-        const_utils::from(self.base.constants.clone())
+    pub fn constants(&self) -> LinksConstants {
+        const_utils::from(RealLinks::constants(&self.base).clone())
     }
 
-    pub fn count(&mut self, query: Option<Link>) -> TLink {
-        let any = self.base.constants.any;
+    pub fn count(&self, query: Option<Link>) -> TLink {
+        let any = RealLinks::constants(&self.base).any;
         let query = query.unwrap_or(Link {
             id: any,
             from_id: any,
@@ -173,22 +180,19 @@ impl UnitedLinks {
         self.base.count_by([query.id, query.from_id, query.to_id])
     }
 
-    pub fn each(
-        &mut self,
-        closure: &js_sys::Function,
-        query: Option<Link>,
-    ) -> Result<TLink, JsValue> {
-        let any = self.base.constants.any;
+    pub fn each(&self, closure: &js_sys::Function, query: Option<Link>) -> Result<TLink, JsValue> {
+        let any = RealLinks::constants(&self.base).any;
         let query = query.unwrap_or(Link {
             id: any,
             from_id: any,
             to_id: any,
         });
         let constants = self.constants();
-        let result = self.base.try_each_by(
-            |link| {
+        let mut callback_error = None;
+        let result = self
+            .base
+            .each_by([query.id, query.from_id, query.to_id], |link| {
                 let link = Link {
-                    // TODO: `impl From`
                     id: link.index,
                     from_id: link.source,
                     to_id: link.target,
@@ -196,33 +200,37 @@ impl UnitedLinks {
                 let this = JsValue::null();
                 let result: Result<JsValue, JsValue> = closure.call1(&this, &JsValue::from(link));
                 match result {
-                    Err(err) => Err(Some(err)),
+                    Err(err) => {
+                        callback_error = Some(err);
+                        Flow::Break
+                    }
                     Ok(result) => {
                         if let Some(result) = result.as_f64() {
                             if result as TLink == constants.r#continue {
-                                Ok(())
+                                Flow::Continue
                             } else {
-                                Err(None)
+                                Flow::Break
                             }
                         } else {
-                            Err(Some(JsValue::from_str(&format!(
-                                "expected `number` found `{}`",
-                                result
-                                    .js_typeof()
-                                    .as_string()
-                                    .map(|s| s.as_str())
-                                    .unwrap_or("[untyped]")
-                            ))))
+                            let result_type = result
+                                .js_typeof()
+                                .as_string()
+                                .unwrap_or_else(|| "[untyped]".to_string());
+                            callback_error = Some(JsValue::from_str(&format!(
+                                "expected `number` found `{result_type}`"
+                            )));
+                            Flow::Break
                         }
                     }
                 }
-            },
-            [query.id, query.from_id, query.to_id],
-        );
+            });
 
-        match result {
-            Ok(_) => Ok(constants.r#continue),
-            Err(err) => err.map_or(Ok(constants.r#break), |err| Err(err)),
+        if let Some(err) = callback_error {
+            Err(err)
+        } else if result.is_continue() {
+            Ok(constants.r#continue)
+        } else {
+            Ok(constants.r#break)
         }
     }
 
@@ -234,6 +242,27 @@ impl UnitedLinks {
     }
 
     pub fn delete(&mut self, id: TLink) -> Result<TLink, JsValue> {
-        Ok(self.base.delete(id).map_err(|e| e.to_string())?)
+        self.base.delete(id).map_err(|e| e.to_string())?;
+        Ok(id)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{Link, UnitedLinks};
+
+    #[test]
+    fn united_links_crud_round_trip() {
+        let mut links = UnitedLinks::new(None).unwrap();
+        let constants = links.constants();
+
+        let link = links.create().unwrap();
+        assert!(link > constants.null);
+
+        assert_eq!(links.update(link, link, link).unwrap(), link);
+        assert_eq!(links.count(Some(Link::new(constants.any, link, link))), 1);
+
+        assert_eq!(links.delete(link).unwrap(), link);
+        assert_eq!(links.count(None), 0);
     }
 }

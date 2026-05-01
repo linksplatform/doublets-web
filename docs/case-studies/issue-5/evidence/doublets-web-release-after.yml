@@ -1,0 +1,196 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref == 'refs/heads/master' }}
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -Dwarnings
+
+jobs:
+  verify:
+    name: Verify (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+          components: rustfmt, clippy
+
+      - name: Cache cargo registry
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+
+      - name: Check Rust and wasm test targets
+        run: cargo check --locked --tests --all-features
+
+      - name: Run native unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOST="$(rustc -vV | sed -n 's/^host: //p')"
+          cargo test --locked --lib --target "${HOST}"
+
+      - name: Run Clippy
+        run: cargo clippy --locked --tests --all-features -- -D warnings
+
+  wasm-package:
+    name: Build and Test npm Package
+    runs-on: ubuntu-latest
+    needs: [verify]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+
+      - name: Cache cargo registry
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-wasm-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-wasm-
+            ${{ runner.os }}-cargo-
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack --locked
+
+      - name: Build wasm package
+        run: wasm-pack build --release --target bundler --out-dir pkg
+
+      - name: Run wasm tests in Node.js
+        run: wasm-pack test --node
+
+      - name: Inspect npm package
+        working-directory: pkg
+        run: npm pack --dry-run
+
+  release:
+    name: Publish npm Package
+    runs-on: ubuntu-latest
+    needs: [verify, wasm-package]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Update npm for OIDC trusted publishing
+        run: npm install -g npm@11
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack --locked
+
+      - name: Read package version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="$(
+            cargo metadata --locked --no-deps --format-version 1 \
+              | node -e "const fs = require('node:fs'); const metadata = JSON.parse(fs.readFileSync(0, 'utf8')); console.log(metadata.packages.find((pkg) => pkg.name === 'doublets-web').version);"
+          )"
+          echo "version=${VERSION}" >> "${GITHUB_OUTPUT}"
+
+      - name: Build wasm package
+        run: wasm-pack build --release --target bundler --out-dir pkg
+
+      - name: Verify package contents
+        working-directory: pkg
+        run: npm pack --dry-run
+
+      - name: Publish to npm with trusted publishing
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          if npm view "doublets-web@${VERSION}" version >/dev/null 2>&1; then
+            echo "doublets-web@${VERSION} is already published; skipping npm publish."
+            echo "published=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          cd pkg
+          npm publish --access public
+          echo "published=true" >> "${GITHUB_OUTPUT}"
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+          PUBLISHED: ${{ steps.publish.outputs.published }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="v${VERSION}"
+          NOTES="$(mktemp)"
+          cat > "${NOTES}" <<EOF
+          [![npm package](https://img.shields.io/npm/v/doublets-web.svg)](https://www.npmjs.com/package/doublets-web)
+
+          doublets-web ${VERSION}
+
+          Package: https://www.npmjs.com/package/doublets-web
+          Trusted publishing workflow: .github/workflows/release.yml
+          npm publish status: ${PUBLISHED}
+          EOF
+
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            gh release edit "${TAG}" --title "doublets-web ${VERSION}" --notes-file "${NOTES}"
+          else
+            gh release create "${TAG}" --title "doublets-web ${VERSION}" --notes-file "${NOTES}" --target "${GITHUB_SHA}"
+          fi
