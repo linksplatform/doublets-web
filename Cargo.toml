@@ -1,6 +1,6 @@
 [package]
 name = "doublets-web"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
     "uselessgoddess",
     "Linksplatform Team <linksplatformtechnologies@gmail.com>",
@@ -10,7 +10,7 @@ rust-version = "1.85"
 description = "WebAssembly bindings for the LinksPlatform Doublets associative storage library."
 readme = "README.md"
 repository = "https://github.com/linksplatform/doublets-web"
-license = "MIT OR Apache-2.0"
+license = "Unlicense"
 keywords = ["associative", "doublets", "linksplatform", "wasm", "webassembly"]
 categories = ["api-bindings", "data-structures", "wasm"]
 

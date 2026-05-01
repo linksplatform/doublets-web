@@ -3,7 +3,7 @@
 [![CI/CD Pipeline](https://github.com/linksplatform/doublets-web/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/linksplatform/doublets-web/actions/workflows/release.yml?query=branch%3Amaster)
 [![npm package](https://img.shields.io/npm/v/doublets-web.svg)](https://www.npmjs.com/package/doublets-web)
 [![GitHub Release](https://img.shields.io/github/v/release/linksplatform/doublets-web.svg)](https://github.com/linksplatform/doublets-web/releases)
-[![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/linksplatform/doublets-web#license)
+[![License](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/linksplatform/doublets-web#license)
 
 WebAssembly bindings for the LinksPlatform [doublets](https://github.com/linksplatform/doublets-rs) associative storage library.
 
@@ -56,7 +56,4 @@ The workflow uses GitHub Actions OIDC (`id-token: write`) and `npm publish` from
 
 ## License
 
-Licensed under either of:
-
-- Apache License, Version 2.0 ([LICENSE_APACHE](LICENSE_APACHE))
-- MIT license ([LICENSE_MIT](LICENSE_MIT))
+Released into the public domain under [The Unlicense](LICENSE).
