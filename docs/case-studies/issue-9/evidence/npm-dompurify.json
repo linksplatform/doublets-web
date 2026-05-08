@@ -1,0 +1,8 @@
+{
+  "name": "dompurify",
+  "version": "3.4.2",
+  "description": "DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. It's written in JavaScript and works in all modern browsers (Safari, Opera (15+), Internet Explorer (10+), Firefox and Chrome - as well as almost anything else usin",
+  "homepage": "https://github.com/cure53/DOMPurify",
+  "repository.url": "git://github.com/cure53/DOMPurify.git",
+  "license": "(MPL-2.0 OR Apache-2.0)"
+}

@@ -7,6 +7,14 @@
 
 WebAssembly bindings for the LinksPlatform [doublets](https://github.com/linksplatform/doublets-rs) associative storage library.
 
+## Live Demo
+
+Try the hosted JavaScript playground and documentation:
+
+https://linksplatform.github.io/doublets-web/
+
+The demo runs `doublets-web` in the browser with a Monaco-powered JavaScript editor, captured console output, and a live doublets graph view. It is deployed by GitHub Pages from this repository.
+
 ## Installation
 
 ```sh
@@ -40,6 +48,20 @@ cargo check --locked --tests --all-features
 cargo clippy --locked --tests --all-features -- -D warnings
 wasm-pack build --release --target bundler --out-dir pkg
 wasm-pack test --node
+```
+
+To run the documentation playground locally:
+
+```sh
+wasm-pack build --release --target web --out-dir site/public/pkg --out-name doublets_web
+npm ci --prefix site
+npm run dev --prefix site
+```
+
+To check the production GitHub Pages bundle:
+
+```sh
+npm run build --prefix site
 ```
 
 ## Publishing

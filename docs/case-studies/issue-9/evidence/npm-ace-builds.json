@@ -1,0 +1,8 @@
+{
+  "name": "ace-builds",
+  "version": "1.43.6",
+  "description": "Ace (Ajax.org Cloud9 Editor)",
+  "homepage": "https://github.com/ajaxorg/ace-builds",
+  "repository.url": "git+https://github.com/ajaxorg/ace-builds.git",
+  "license": "BSD-3-Clause"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "codemirror",
+  "version": "6.0.2",
+  "description": "Basic configuration for the CodeMirror code editor",
+  "homepage": "https://github.com/codemirror/basic-setup#readme",
+  "repository.url": "git+https://github.com/codemirror/basic-setup.git",
+  "license": "MIT"
+}

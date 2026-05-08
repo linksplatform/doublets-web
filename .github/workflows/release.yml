@@ -105,6 +105,15 @@ jobs:
         working-directory: pkg
         run: npm pack --dry-run
 
+      - name: Build browser demo package
+        run: wasm-pack build --release --target web --out-dir site/public/pkg --out-name doublets_web
+
+      - name: Install demo dependencies
+        run: npm ci --prefix site
+
+      - name: Build GitHub Pages demo
+        run: npm run build --prefix site
+
   release:
     name: Publish npm Package
     runs-on: ubuntu-latest

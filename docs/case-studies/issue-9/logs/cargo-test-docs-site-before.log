@@ -1,0 +1,34 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded futures-core v0.3.32
+  Downloaded futures-task v0.3.32
+  Downloaded wasm-bindgen-macro v0.2.120
+  Downloaded wasm-bindgen-test-macro v0.3.70
+  Downloaded wasm-bindgen-test-shared v0.2.120
+  Downloaded wasm-bindgen-futures v0.4.70
+  Downloaded zmij v1.0.21
+  Downloaded slab v0.4.12
+  Downloaded wasm-bindgen-test v0.3.70
+  Downloaded js-sys v0.3.97
+  Downloaded bumpalo v3.20.2
+  Downloaded pin-project-lite v0.2.17
+  Downloaded wasm-bindgen-macro-support v0.2.120
+  Downloaded futures-util v0.3.32
+  Downloaded wasm-bindgen-shared v0.2.120
+  Downloaded wasm-bindgen v0.2.120
+  Downloaded itoa v1.0.18
+   Compiling proc-macro2 v1.0.106
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.45
+   Compiling wasm-bindgen-shared v0.2.120
+   Compiling rustversion v1.0.22
+   Compiling libm v0.2.16
+   Compiling once_cell v1.21.4
+error[E0463]: can't find crate for `std`
+  |
+  = note: the `wasm32-unknown-unknown` target may not be installed
+  = help: consider downloading the target with `rustup target add wasm32-unknown-unknown`
+
+For more information about this error, try `rustc --explain E0463`.
+error: could not compile `once_cell` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

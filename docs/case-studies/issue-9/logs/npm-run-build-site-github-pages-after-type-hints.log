@@ -1,0 +1,24 @@
+
+> doublets-web-pages@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v8.0.11 building client environment for production...
+[2Ktransforming...✓ 1031 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                0.67 kB │ gzip:   0.38 kB
+dist/assets/playground-worker-BgvB1XrI.js      2.79 kB
+dist/assets/codicon-ngg6Pgfi.ttf             121.97 kB
+dist/assets/editor.worker-Bd9IXS8d.js        279.99 kB
+dist/assets/ts.worker-METxwbDZ.js          6,894.27 kB
+dist/assets/index-Dagh-PW8.css               152.68 kB │ gzip:  24.47 kB
+dist/assets/tsMode-BCq7gxMJ.js                22.99 kB │ gzip:   6.54 kB │ map:     87.10 kB
+dist/assets/index-BFGrgms4.js              3,646.50 kB │ gzip: 930.53 kB │ map: 13,379.14 kB
+
+[33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+  - vite:worker (36%)
+  - vite:css (23%)
+  - vite:worker-import-meta-url (23%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 5.37s

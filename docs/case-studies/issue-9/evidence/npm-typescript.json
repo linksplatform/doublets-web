@@ -1,0 +1,8 @@
+{
+  "name": "typescript",
+  "version": "6.0.3",
+  "description": "TypeScript is a language for application scale JavaScript development",
+  "homepage": "https://www.typescriptlang.org/",
+  "repository.url": "git+https://github.com/microsoft/TypeScript.git",
+  "license": "Apache-2.0"
+}
