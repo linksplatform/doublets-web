@@ -1,0 +1,8 @@
+{
+  "name": "monaco-editor",
+  "version": "0.55.1",
+  "description": "A browser based code editor",
+  "homepage": "https://github.com/microsoft/monaco-editor",
+  "repository.url": "git+https://github.com/microsoft/monaco-editor.git",
+  "license": "MIT"
+}

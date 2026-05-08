@@ -1,0 +1,754 @@
+[INFO  wasm_pack::command] Running build command...
+[INFO  wasm_pack::command::build] Checking rustc version...
+[INFO  wasm_pack::command::build] rustc version is 95.
+[INFO  wasm_pack::command::build] Checking crate configuration...
+[INFO  wasm_pack::command::build] Crate is correctly configured.
+[INFO  wasm_pack::command::build] Checking for wasm-target...
+[INFO]: 🎯  Checking for the Wasm target...
+[INFO  wasm_pack::build::wasm_target] Found wasm32-unknown-unknown in "/home/box/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/wasm32-unknown-unknown/lib"
+[INFO  wasm_pack::command::build] Checking for wasm-target was successful.
+[INFO  wasm_pack::command::build] Building wasm...
+[INFO]: 🌀  Compiling to Wasm...
+   Compiling proc-macro2 v1.0.106
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.45
+   Compiling wasm-bindgen-shared v0.2.120
+   Compiling rustversion v1.0.22
+   Compiling autocfg v1.5.0
+   Compiling once_cell v1.21.4
+   Compiling bumpalo v3.20.2
+   Compiling thiserror v2.0.18
+   Compiling num-traits v0.2.19
+   Compiling cfg-if v1.0.4
+   Compiling fastrand v2.4.1
+   Compiling memmap2 v0.9.10
+   Compiling wasm-bindgen v0.2.120
+   Compiling tempfile v3.27.0
+   Compiling futures-core v0.3.32
+   Compiling slab v0.4.12
+   Compiling allocator-api2 v0.4.0
+   Compiling syn v2.0.117
+   Compiling beef v0.5.2
+   Compiling futures-task v0.3.32
+   Compiling pin-project-lite v0.2.17
+   Compiling futures-util v0.3.32
+   Compiling platform-num v0.8.0
+   Compiling platform-trees v0.3.4
+   Compiling tap v1.0.1
+   Compiling leak_slice v0.2.0
+   Compiling wasm-bindgen-macro-support v0.2.120
+   Compiling thiserror-impl v2.0.18
+   Compiling platform-mem v0.3.0
+   Compiling platform-data v2.0.0
+   Compiling doublets v0.3.0
+   Compiling wasm-bindgen-macro v0.2.120
+   Compiling js-sys v0.3.97
+   Compiling console_error_panic_hook v0.1.7
+   Compiling doublets-web v0.1.3 (/tmp/gh-issue-solver-1778220706864)
+    Finished `release` profile [optimized] target(s) in 11.63s
+[INFO  wasm_pack::command::build] wasm built at "/tmp/gh-issue-solver-1778220706864/target/wasm32-unknown-unknown/release/doublets_web.wasm".
+[INFO  wasm_pack::command::build] Creating a pkg directory...
+[INFO  wasm_pack::command::build] Created a pkg directory at "/tmp/gh-issue-solver-1778220706864".
+[INFO  wasm_pack::command::build] Identifying wasm-bindgen dependency...
+[INFO  wasm_pack::command::build] Installing wasm-bindgen-cli...
+[INFO]: ⬇️  Installing wasm-bindgen...
+[INFO  wasm_pack::command::build] Installing wasm-bindgen-cli was successful.
+[INFO  wasm_pack::command::build] Building the wasm bindings...
+[INFO  wasm_pack::child] Running "/home/box/.cache/.wasm-pack/wasm-bindgen-6100c0c263093c56/wasm-bindgen" "--version"
+[INFO  wasm_pack::child] Running "/home/box/.cache/.wasm-pack/wasm-bindgen-6100c0c263093c56/wasm-bindgen" "--version"
+[INFO  wasm_pack::child] Running "/home/box/.cache/.wasm-pack/wasm-bindgen-6100c0c263093c56/wasm-bindgen" "/tmp/gh-issue-solver-1778220706864/target/wasm32-unknown-unknown/release/doublets_web.wasm" "--out-dir" "/tmp/gh-issue-solver-1778220706864/site/public/pkg" "--typescript" "--target" "web" "--out-name" "doublets_web"
+[2026-05-08T06:28:36Z DEBUG walrus::module::types] parsing type section
+[2026-05-08T06:28:36Z DEBUG walrus::module::imports] parse import section
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] parse function section
+[2026-05-08T06:28:36Z DEBUG walrus::module::tables] parse table section
+[2026-05-08T06:28:36Z DEBUG walrus::module::memories] parse memory section
+[2026-05-08T06:28:36Z DEBUG walrus::module::globals] parse global section
+[2026-05-08T06:28:36Z DEBUG walrus::module::exports] parse export section
+[2026-05-08T06:28:36Z DEBUG walrus::module::elements] parse element section
+[2026-05-08T06:28:36Z DEBUG walrus::module::data] parse data section
+[2026-05-08T06:28:36Z DEBUG walrus::module] parsing custom section `__wasm_bindgen_unstable`
+[2026-05-08T06:28:36Z DEBUG walrus::module] parse name section
+[2026-05-08T06:28:36Z DEBUG walrus::module::producers] parse producers section
+[2026-05-08T06:28:36Z DEBUG walrus::module] parsing custom section `target_features`
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] parse code section
+[2026-05-08T06:28:36Z DEBUG walrus::module] parse complete
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] custom section '__wasm_bindgen_unstable' looks like a Wasm bindgen section
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 81
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 91
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 81
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 73
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 79
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 99
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 86
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 104
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 109
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 99
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 71
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 75
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 117
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 69
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 77
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 39
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 39
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 84
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 39
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 233
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 87
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 302
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 490
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 5603
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 99
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 89
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 97
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 186
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2273
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 633
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 3224
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 3209
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 272
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2107
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 375
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 943
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1689
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2153
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2130
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2084
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 163
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 251
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 765
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1055
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2146
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 547
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 160
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2107
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1856
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2199
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 162
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 178
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1380
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1458
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 231
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 5910
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1427
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 8288
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1406
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2176
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2130
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 378
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 262
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2268
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1902
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 228
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 166
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2153
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 364
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 169
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2266
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 8068
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 395
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 367
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1064
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 385
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 509
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 91
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 329
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 3356
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 163
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 2107
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 737
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 4053
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 858
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 5224
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1906
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 324
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 182
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 109
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 182
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 267
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 229
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 340
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 280
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 365
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 96
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 106
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 121
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 127
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 645
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1135
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 640
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 108
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 170
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1959
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 3224
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 5794
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 229
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 803
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 129
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 122
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 136
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 232
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 117
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 168
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1368
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 274
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 314
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 138
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 384
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 155
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 130
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 5686
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 403
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 115
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 275
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 218
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 270
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 244
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 819
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 138
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 394
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 4510
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1491
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 114
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 208
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 110
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 131
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 122
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 118
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 363
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 156
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 758
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 110
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 109
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 374
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 593
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 272
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 374
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1985
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 145
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 107
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1266
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 130
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 115
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 127
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 400
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 122
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 375
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 885
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 212
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1107
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 111
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 183
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 238
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1412
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1350
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 304
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 840
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 126
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 122
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 450
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 107
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 288
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 122
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 123
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 127
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 238
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 516
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 294
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 178
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 198
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 482
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 988
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 367
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 198
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 189
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 1119
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found version specifier {"schema_version":"0.2.119","version":"0.2.120"}
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support::wit] found a program of length 396
+[2026-05-08T06:28:36Z DEBUG wasm_bindgen_cli_support] Exception handling version: None
+[2026-05-08T06:28:36Z DEBUG walrus::passes::used] starting to calculate used set
+[2026-05-08T06:28:36Z DEBUG walrus::passes::used] starting to calculate used set
+[2026-05-08T06:28:36Z DEBUG walrus::module] start emit
+[2026-05-08T06:28:36Z DEBUG walrus::module::types] emitting type section
+[2026-05-08T06:28:36Z DEBUG walrus::module::imports] emit import section
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function section
+[2026-05-08T06:28:36Z DEBUG walrus::module::tables] emit table section
+[2026-05-08T06:28:36Z DEBUG walrus::module::memories] emit memory section
+[2026-05-08T06:28:36Z DEBUG walrus::module::tags] emit tag section
+[2026-05-08T06:28:36Z DEBUG walrus::module::globals] emit global section
+[2026-05-08T06:28:36Z DEBUG walrus::module::exports] emit export section
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit code section
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 223 } Some("<dlmalloc[e24a27700634d609]::dlmalloc::Dlmalloc<dlmalloc[e24a27700634d609]::sys::System>>::malloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 75 } Some("link_new")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 101 } Some("platform_trees::trees::recursive_size_balanced_tree::RecursiveSizeBalancedTree::fix_size::h1cc6a42c9c8ffc26")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 243 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::StaticStrPayload as core[c5930c85a12de822]::panic::PanicPayload>::take_box")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 297 } Some("<core[c5930c85a12de822]::fmt::builders::PadAdapter as core[c5930c85a12de822]::fmt::Write>::write_fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 38 } Some("__wbg_get_linksconstants_skip")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 14 } Some("<core[c5930c85a12de822]::fmt::Error as core[c5930c85a12de822]::fmt::Debug>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 115 } Some("<&T as core::fmt::Display>::fmt::h539188946bdb3d39")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 117 } Some("<&T as core::fmt::Display>::fmt::he40987830d1d942a")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 39 } Some("__wbg_get_linksconstants_source_part")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 40 } Some("__wbg_get_linksconstants_target_part")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 44 } Some("__wbg_set_link_from_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 129 } Some("platform_trees::trees::recursive_size_balanced_tree::RecursiveSizeBalancedTree::fix_size::h57f72b6698edd67b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 116 } Some("<&T as core::fmt::Display>::fmt::ha43e6cb27ea960f8")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 250 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::FormatStringPayload as core[c5930c85a12de822]::panic::PanicPayload>::take_box")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 133 } Some("__rustc[b7974e8690430dd9]::__rust_alloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 267 } Some("core[c5930c85a12de822]::panicking::panic_fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 18 } Some("core::ptr::drop_in_place<doublets::data::error::Error<u32>>::h7aeef627b79641ad")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 286 } Some("core[c5930c85a12de822]::option::expect_failed")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 197 } Some("__wbindgen_malloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 45 } Some("__wbg_set_link_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 240 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::FormatStringPayload as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 46 } Some("__wbg_set_link_to_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 278 } Some("<core[c5930c85a12de822]::fmt::Formatter>::pad_integral::write_prefix")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 47 } Some("__wbg_set_linksconstants__break")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 194 } Some("__wbindgen_destroy_closure")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 48 } Some("__wbg_set_linksconstants__continue")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 137 } Some("<core[c5930c85a12de822]::fmt::Error as core[c5930c85a12de822]::fmt::Debug>::fmt[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 198 } Some("__wbindgen_realloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 152 } Some("wasm_bindgen::throw_str::h890f04a6704785b4")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 143 } Some("core::ptr::drop_in_place<alloc::string::String>::h0d39174a93524ff7")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 279 } Some("<core[c5930c85a12de822]::fmt::Formatter>::debug_struct_field2_finish")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 93 } Some("doublets::mem::unit::store::Store<T,M,TS,TT,TU>::each_core::h7f565494e7e58f8b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 209 } Some("core[c5930c85a12de822]::ptr::drop_in_place::<core[c5930c85a12de822]::option::Option<alloc[3ca501edff3f0c7c]::vec::Vec<u8>>>")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 49 } Some("__wbg_set_linksconstants__null")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 202 } Some("<usize as core[c5930c85a12de822]::fmt::Debug>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 126 } Some("alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle::hd2cdb4eb8fac0afc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 175 } Some("wasm_bindgen::__rt::throw_null::h44421361f0e07d63")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 176 } Some("wasm_bindgen::__rt::borrow_fail::hf85045cca5bfe738")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 204 } Some("<&T as core::fmt::Debug>::fmt::h79c1caba1d8f52b3")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 210 } Some("core[c5930c85a12de822]::ptr::drop_in_place::<alloc[3ca501edff3f0c7c]::string::String>")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 221 } Some("__rustc[b7974e8690430dd9]::__rdl_alloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 274 } Some("<core[c5930c85a12de822]::fmt::builders::DebugList>::finish")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 254 } Some("core[c5930c85a12de822]::ptr::drop_in_place::<alloc[3ca501edff3f0c7c]::string::String>[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 100 } Some("platform_trees::trees::iterative_size_balanced_tree::IterativeSizeBalancedTree::detach_core::hb934f1c56774c976")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 284 } Some("core[c5930c85a12de822]::cell::panic_already_borrowed")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 256 } Some("alloc[3ca501edff3f0c7c]::raw_vec::handle_error")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1244 } Some("unitedlinks_each externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 217 } Some("std[a543996e6e7dbf1e]::panicking::panic_with_hook")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 265 } Some("core[c5930c85a12de822]::panicking::panic")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1249 } Some("unitedlinks_update multivalue shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 122 } Some("alloc::rc::Rc<T,A>::drop_slow::ha404025f77fcb84a")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 50 } Some("__wbg_set_linksconstants_any")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 123 } Some("alloc::rc::Rc<T,A>::drop_slow::ha4d4885e1736161f")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 51 } Some("__wbg_set_linksconstants_error")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 124 } Some("alloc::rc::Rc<T,A>::drop_slow::hccf60307a42ad1a6")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1241 } Some("wasm_bindgen::__wbindgen_typeof::__wbg___wbindgen_typeof_b2c23837ad6cde31::haf4ebd26f2ebe9e3 externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1246 } Some("unitedlinks_each externref shim multivalue shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 205 } Some("<&T as core::fmt::Display>::fmt::h153b1c96f6e95e83")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1243 } Some("Ref(String) -> Externref externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 231 } Some("__rustc[b7974e8690430dd9]::__rust_alloc_error_handler")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 310 } Some("wasm_bindgen::convert::closures::_::invoke::h47baf4b88872bfcb")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 53 } Some("__wbg_set_linksconstants_index_part")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 125 } Some("alloc::raw_vec::RawVecInner<A>::finish_grow::hc9efad3d4530015e")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 55 } Some("__wbg_set_linksconstants_itself")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 230 } Some("__rustc[b7974e8690430dd9]::rust_begin_unwind")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 56 } Some("__wbg_set_linksconstants_skip")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1248 } Some("unitedlinks_delete multivalue shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 57 } Some("__wbg_set_linksconstants_source_part")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 128 } Some("platform_trees::trees::iterative_size_balanced_tree::IterativeSizeBalancedTree::detach_core::h5ce6cfdbe51921c5")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 275 } Some("<core[c5930c85a12de822]::fmt::Formatter>::debug_list")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 242 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::StaticStrPayload as core[c5930c85a12de822]::panic::PanicPayload>::as_str")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1245 } Some("unitedlinks_new multivalue shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 258 } Some("alloc[3ca501edff3f0c7c]::alloc::handle_alloc_error")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1247 } Some("unitedlinks_create multivalue shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 261 } Some("<core[c5930c85a12de822]::fmt::Error as core[c5930c85a12de822]::fmt::Debug>::fmt[2]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 26 } Some("__wbg_get_link_from_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 285 } Some("<core[c5930c85a12de822]::cell::BorrowMutError as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 27 } Some("__wbg_get_link_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 196 } Some("__wbindgen_free")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 238 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::any::Any>::type_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 58 } Some("__wbg_set_linksconstants_target_part")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 239 } Some("<&str as core[c5930c85a12de822]::any::Any>::type_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 232 } Some("std[a543996e6e7dbf1e]::alloc::rust_oom")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 281 } Some("<core[c5930c85a12de822]::fmt::Formatter>::write_str")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 181 } Some("alloc::raw_vec::RawVecInner<A>::finish_grow::h55ac849c30be118d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 319 } Some("wasm_bindgen::convert::closures::_::invoke::ha2c1f4d995e3cfa9")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1236 } Some("doublets_web::<impl core::convert::From<doublets_web::Link> for wasm_bindgen::JsValue>::from::__wbg_link_new::hf04bd88c06202a69 externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 296 } Some("<str as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 288 } Some("<&dyn core[c5930c85a12de822]::fmt::Debug as core[c5930c85a12de822]::fmt::Debug>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 216 } Some("<alloc[3ca501edff3f0c7c]::raw_vec::RawVecInner>::finish_grow")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1239 } Some("console_error_panic_hook::Error::stack::__wbg_stack_3b0d974bbf31e44f::h5deb40906d198162 externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1240 } Some("wasm_bindgen::__wbindgen_number_get::__wbg___wbindgen_number_get_dd6d69a6079f26f1::hb3565f961c472ee5 externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1242 } Some("wasm_bindgen::__wbindgen_string_get::__wbg___wbindgen_string_get_965592073e5d848c::h46647c6b6a517b4f externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 298 } Some("wasm_bindgen::convert::closures::_::invoke::h02ca3befc5f61421")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 299 } Some("wasm_bindgen::convert::closures::_::invoke::h10d7202a0e54b26d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 28 } Some("__wbg_get_link_to_id")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 306 } Some("wasm_bindgen::convert::closures::_::invoke::h2f3f3e5ae8b22e32")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 29 } Some("__wbg_get_linksconstants__break")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 307 } Some("wasm_bindgen::convert::closures::_::invoke::h3bc03fbfdc0e0f72")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 30 } Some("__wbg_get_linksconstants__continue")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 309 } Some("wasm_bindgen::convert::closures::_::invoke::h3f2c65d96bf39f09")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 31 } Some("__wbg_get_linksconstants__null")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 313 } Some("wasm_bindgen::convert::closures::_::invoke::h768ab5f529e86a79")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 32 } Some("__wbg_get_linksconstants_any")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 104 } Some("<doublets::mem::unit::generic::targets_recursionless_size_balanced_tree::LinksTargetsRecursionlessSizeBalancedTree<T> as doublets::mem::traits::LinksTree<T>>::attach::h6e91322c5e9893b3")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 91 } Some("core::ops::function::FnOnce::call_once{{vtable.shim}}::h5b7282d9110c0e9b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 148 } Some("wasm_bindgen::__wbindgen_throw::ha5d4347a1170560a")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1238 } Some("console_error_panic_hook::Error::new::__wbg_new_227d7c05414eb861::h73dce294ca464405 externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 89 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 33 } Some("__wbg_get_linksconstants_error")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 135 } Some("__rustc[b7974e8690430dd9]::__rust_realloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 35 } Some("__wbg_get_linksconstants_index_part")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 195 } Some("__wbindgen_exn_store")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 37 } Some("__wbg_get_linksconstants_itself")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 218 } Some("<&str as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 321 } Some("wasm_bindgen::convert::closures::_::invoke::haf89fef9f4a8863d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 241 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::StaticStrPayload as core[c5930c85a12de822]::panic::PanicPayload>::get")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 132 } Some("<doublets::mem::unit::generic::sources_recursionless_size_balanced_tree::LinksSourcesRecursionlessSizeBalancedTree<T> as doublets::mem::traits::LinksTree<T>>::attach::h900792525424c431")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 41 } Some("__wbg_link_free")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 316 } Some("wasm_bindgen::convert::closures::_::invoke::h91e6a703515db2fe")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 42 } Some("__wbg_linkrange_free")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 318 } Some("wasm_bindgen::convert::closures::_::invoke::ha28a6ae73f9c9386")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 244 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::StaticStrPayload as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 324 } Some("wasm_bindgen::convert::closures::_::invoke::hf7b290af6e607304")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 43 } Some("__wbg_linksconstants_free")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 303 } Some("wasm_bindgen::convert::closures::_::invoke::h1c8c86f3e5e84553")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 245 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Display>::fmt[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 311 } Some("wasm_bindgen::convert::closures::_::invoke::h67a41b213e13ac70")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 277 } Some("core[c5930c85a12de822]::str::count::do_count_chars")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 149 } Some("wasm_bindgen::__wbindgen_typeof::hbd391f5f1cd40120")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 144 } Some("alloc::raw_vec::RawVecInner<A>::finish_grow::ha30439b536bb4f35")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 212 } Some("std[a543996e6e7dbf1e]::sys::backtrace::__rust_end_short_backtrace::<std[a543996e6e7dbf1e]::alloc::rust_oom::{closure#0}, !>")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 79 } Some("linksconstants_via_external")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 295 } Some("<core[c5930c85a12de822]::ptr::alignment::Alignment as core[c5930c85a12de822]::fmt::Debug>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 1237 } Some("js_sys::Function<F>::call1::__wbg_call_a41d6421b30a32c5::h43b66c831d1c6415 externref shim")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 312 } Some("wasm_bindgen::convert::closures::_::invoke::h68ad6cbced206e7c")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 80 } Some("linksconstants_via_only_external")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 214 } Some("std[a543996e6e7dbf1e]::sys::backtrace::__rust_end_short_backtrace::<std[a543996e6e7dbf1e]::panicking::panic_handler::{closure#0}, !>")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 36 } Some("__wbg_get_linksconstants_internal_range")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 227 } Some("__rustc[b7974e8690430dd9]::__rdl_realloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 219 } Some("std[a543996e6e7dbf1e]::alloc::default_alloc_error_hook")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 253 } Some("<dlmalloc[e24a27700634d609]::sys::System as dlmalloc[e24a27700634d609]::Allocator>::alloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 211 } Some("core[c5930c85a12de822]::ptr::drop_in_place::<std[a543996e6e7dbf1e]::panicking::panic_handler::FormatStringPayload>")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 208 } Some("<alloc[3ca501edff3f0c7c]::raw_vec::RawVecInner<_>>::reserve::do_reserve_and_handle::<alloc[3ca501edff3f0c7c]::alloc::Global>")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 213 } Some("std[a543996e6e7dbf1e]::alloc::rust_oom::{closure#0}")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 304 } Some("wasm_bindgen::convert::closures::_::invoke::h20b0266f8cd2c5a8")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 320 } Some("wasm_bindgen::convert::closures::_::invoke::ha47ffae55d68df55")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 268 } Some("<&str as core[c5930c85a12de822]::fmt::Display>::fmt[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 23 } Some("core::ptr::drop_in_place<alloc::string::String>::hd75d7b8ed60ad1ae")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 236 } Some("std[a543996e6e7dbf1e]::panicking::panic_count::is_zero_slow_path")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 108 } Some("core::ptr::drop_in_place<alloc::string::String>::hd75d7b8ed60ad1ae[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 113 } Some("std::sys::sync::once::no_threads::Once::call::h3ec9fbe629322a92")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 226 } Some("<dlmalloc[e24a27700634d609]::dlmalloc::Dlmalloc<dlmalloc[e24a27700634d609]::sys::System>>::free")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 220 } Some("__rustc[b7974e8690430dd9]::rust_panic")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 52 } Some("__wbg_set_linksconstants_external_range")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 225 } Some("__rustc[b7974e8690430dd9]::__rdl_dealloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 251 } Some("<std[a543996e6e7dbf1e]::panicking::begin_panic::Payload<&str> as core[c5930c85a12de822]::panic::PanicPayload>::as_str")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 287 } Some("core[c5930c85a12de822]::result::unwrap_failed")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 118 } Some("core::ops::function::Fn::call::h27d951a1bd4a4d46")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 107 } Some("core::fmt::Write::write_fmt::h36219cf27d7242b3")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 134 } Some("__rustc[b7974e8690430dd9]::__rust_dealloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 252 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 142 } Some("core::fmt::Write::write_fmt::h22122a6439f0959b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 259 } Some("alloc[3ca501edff3f0c7c]::raw_vec::capacity_overflow")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 119 } Some("core::ops::function::FnMut::call_mut::h93c801879c74eb1f")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 264 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_fmt[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 120 } Some("core::ops::function::FnOnce::call_once{{vtable.shim}}::h001c76358220c4de")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 283 } Some("core[c5930c85a12de822]::option::unwrap_failed")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 200 } Some("__externref_table_alloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 317 } Some("wasm_bindgen::convert::closures::_::invoke::h9c243d5fcd4512f3")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 199 } Some("__externref_drop_slice")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 233 } Some("<dlmalloc[e24a27700634d609]::dlmalloc::Dlmalloc<dlmalloc[e24a27700634d609]::sys::System>>::insert_large_chunk")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 302 } Some("wasm_bindgen::convert::closures::_::invoke::h180c3a216e8fda23")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 276 } Some("<core[c5930c85a12de822]::fmt::Formatter>::pad_integral")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 19 } Some("doublets_web::UnitedLinks::each::hc9915cf5d085a6b7")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 139 } Some("alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle::h807a9df349f1ec0e")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 207 } Some("__rustc[b7974e8690430dd9]::__rust_start_panic")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 136 } Some("__rustc[b7974e8690430dd9]::__rust_no_alloc_shim_is_unstable_v2")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 323 } Some("wasm_bindgen::convert::closures::_::invoke::hec3e1dfd5b3b86e7")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 224 } Some("__rustc[b7974e8690430dd9]::__rust_abort")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 255 } Some("<alloc[3ca501edff3f0c7c]::raw_vec::RawVecInner<_>>::reserve::do_reserve_and_handle::<alloc[3ca501edff3f0c7c]::alloc::Global>[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 301 } Some("wasm_bindgen::convert::closures::_::invoke::h178d063414773153")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 17 } Some("doublets_web::UnitedLinks::new::h4467cf661ac9f8b7")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 83 } Some("unitedlinks_count")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 280 } Some("<core[c5930c85a12de822]::fmt::Formatter>::pad")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 16 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_str")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 237 } Some("<std[a543996e6e7dbf1e]::io::error::Error as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 54 } Some("__wbg_set_linksconstants_internal_range")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 92 } Some("doublets::mem::unit::store::Store<T,M,TS,TT,TU>::with_constants::h8fc3d7a38d28eada")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 106 } Some("<&T as core::fmt::Display>::fmt::h8b6b8603dde9e64e")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 291 } Some("<i32 as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 114 } Some("<&T as core::fmt::Debug>::fmt::h530643cf392a667b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 90 } Some("doublets_web::UnitedLinks::each::{{closure}}::hf7c5ddd7342fefc2")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 99 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_str[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 257 } Some("<alloc[3ca501edff3f0c7c]::raw_vec::RawVecInner>::finish_grow[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 272 } Some("<core[c5930c85a12de822]::fmt::builders::DebugStruct>::field")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 34 } Some("__wbg_get_linksconstants_external_range")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 300 } Some("wasm_bindgen::convert::closures::_::invoke::h13e5919dc09b30c7")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 266 } Some("core[c5930c85a12de822]::slice::index::slice_index_fail")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 247 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_str[3]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 322 } Some("wasm_bindgen::convert::closures::_::invoke::hb5a5934c9a62960d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 82 } Some("unitedlinks_constants")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 249 } Some("<std[a543996e6e7dbf1e]::panicking::panic_handler::FormatStringPayload as core[c5930c85a12de822]::panic::PanicPayload>::get")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 94 } Some("doublets::data::traits::Doublets::count_by::h834147c53eb1fd8e")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 305 } Some("wasm_bindgen::convert::closures::_::invoke::h271d7c38cebeeb02")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 229 } Some("<dlmalloc[e24a27700634d609]::dlmalloc::Dlmalloc<dlmalloc[e24a27700634d609]::sys::System>>::dispose_chunk")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 215 } Some("std[a543996e6e7dbf1e]::panicking::panic_handler::{closure#0}")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 314 } Some("wasm_bindgen::convert::closures::_::invoke::h84f305d47e23e62d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 308 } Some("wasm_bindgen::convert::closures::_::invoke::h3d5b377c40539656")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 282 } Some("<u32 as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 140 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_str[2]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 315 } Some("wasm_bindgen::convert::closures::_::invoke::h87dec98db95b47cd")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 141 } Some("console_error_panic_hook::hook::hf0d1f4e438b6737c")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 263 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_str[4]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 78 } Some("linksconstants_new")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 235 } Some("std[a543996e6e7dbf1e]::panicking::set_hook")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 270 } Some("core[c5930c85a12de822]::panicking::panic_bounds_check")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 271 } Some("<core[c5930c85a12de822]::fmt::builders::PadAdapter as core[c5930c85a12de822]::fmt::Write>::write_str")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 201 } Some("__externref_table_dealloc")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 248 } Some("<std[a543996e6e7dbf1e]::panic::PanicHookInfo as core[c5930c85a12de822]::fmt::Display>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 262 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_char[4]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 96 } Some("doublets::data::traits::Doublets::delete_by::ha51874b2ac372bf1")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 151 } Some("wasm_bindgen::__wbindgen_string_get::h9cc7eea97f5c6648")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 76 } Some("linksconstants_clone")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 110 } Some("doublets::mem::resize_mem::h17aba3b22cd14433")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 289 } Some("<usize as core[c5930c85a12de822]::fmt::LowerHex>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 121 } Some("alloc::rc::Rc<T,A>::drop_slow::h7833db55ae8847c1")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 127 } Some("<platform_mem::alloc::Alloc<T,A> as platform_mem::raw_mem::RawMem>::grow::h0e78bb35b03db3fa")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 15 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_char")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 111 } Some("<doublets::mem::unit::generic::unused_links::UnusedLinks<T> as doublets::mem::traits::LinksList<T>>::attach_as_first::hd12dd5c0a75f7899")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 292 } Some("<usize as core[c5930c85a12de822]::fmt::UpperHex>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 98 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_char[1]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 273 } Some("<core[c5930c85a12de822]::fmt::builders::DebugSet>::entry")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 222 } Some("<dlmalloc[e24a27700634d609]::dlmalloc::Dlmalloc<dlmalloc[e24a27700634d609]::sys::System>>::memalign")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 269 } Some("core[c5930c85a12de822]::fmt::write")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 290 } Some("<core[c5930c85a12de822]::fmt::builders::PadAdapter as core[c5930c85a12de822]::fmt::Write>::write_char")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 105 } Some("<&T as core::fmt::Debug>::fmt::h84bd525c50961be2")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 246 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_char[3]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 203 } Some("<&T as core::fmt::Debug>::fmt::h2ce02292d9d95719")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 293 } Some("<core[c5930c85a12de822]::num::nonzero::NonZero<usize> as core[c5930c85a12de822]::fmt::Debug>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 131 } Some("<doublets::mem::unit::generic::sources_recursionless_size_balanced_tree::LinksSourcesRecursionlessSizeBalancedTree<T> as doublets::mem::traits::LinksTree<T>>::count_usages::h883a60bc296f3c4b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 138 } Some("<alloc[3ca501edff3f0c7c]::string::String as core[c5930c85a12de822]::fmt::Write>::write_char[2]")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 234 } Some("std[a543996e6e7dbf1e]::panicking::panic_count::increase")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 294 } Some("<u32 as core[c5930c85a12de822]::fmt::Debug>::fmt")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 260 } Some("alloc[3ca501edff3f0c7c]::fmt::format::format_inner")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 150 } Some("wasm_bindgen::__wbindgen_number_get::h6e31bdabf5a81435")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 103 } Some("<doublets::mem::unit::generic::targets_recursionless_size_balanced_tree::LinksTargetsRecursionlessSizeBalancedTree<T> as doublets::mem::traits::LinksTree<T>>::count_usages::h8f7f6ce380858453")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 77 } Some("linksconstants_full_new")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 86 } Some("unitedlinks_each")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 228 } Some("<dlmalloc[e24a27700634d609]::dlmalloc::Dlmalloc<dlmalloc[e24a27700634d609]::sys::System>>::unlink_chunk")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 22 } Some("doublets_web::UnitedLinks::update::h48798d412f7573d1")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 109 } Some("<doublets::data::error::Error<T> as core::fmt::Display>::fmt::h06e4d4d72ec2fab1")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 97 } Some("doublets::data::traits::Doublets::update_by::hcd44e957c9dd45ca")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 81 } Some("linksconstants_via_ranges")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 20 } Some("doublets_web::UnitedLinks::create::h62f045e187afbdf0")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 102 } Some("doublets::mem::unit::generic::targets_recursionless_size_balanced_tree::each_usages_core::ha526c60ad9a1a68b")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 130 } Some("doublets::mem::unit::generic::sources_recursionless_size_balanced_tree::each_usages_core::hf64dfdbc9f51dad1")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 87 } Some("unitedlinks_new")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 206 } Some("<platform_mem::raw_mem::Error as core::fmt::Display>::fmt::h1496da0ac084710d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 85 } Some("unitedlinks_delete")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 88 } Some("unitedlinks_update")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 112 } Some("<doublets::mem::unit::generic::unused_links::UnusedLinks<T> as doublets::mem::traits::LinksList<T>>::detach::h1064814da7c08141")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 59 } Some("__wbg_unitedlinks_free")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 21 } Some("doublets_web::UnitedLinks::delete::h3addd23d0cb99a52")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 95 } Some("doublets::data::traits::Doublets::create_by::ha3e644482aa7c48d")
+[2026-05-08T06:28:36Z DEBUG walrus::module::functions] emit function Id { idx: 84 } Some("unitedlinks_create")
+[2026-05-08T06:28:36Z DEBUG walrus::module::data] emit data section
+[2026-05-08T06:28:36Z DEBUG walrus::module] emit name section
+[2026-05-08T06:28:36Z DEBUG walrus::module::producers] emit producers section
+[2026-05-08T06:28:36Z DEBUG walrus::module] skipping DWARF custom section
+[2026-05-08T06:28:36Z DEBUG walrus::module] emitting custom section target_features
+[2026-05-08T06:28:36Z DEBUG walrus::module] emission finished
+[INFO  wasm_pack::command::build] wasm bindings were built at "/tmp/gh-issue-solver-1778220706864/site/public/pkg".
+[INFO  wasm_pack::command::build] executing wasm-opt with ["-O"]
+[INFO]: Optimizing wasm binaries with `wasm-opt`...
+[INFO  wasm_pack::child] Running "/home/box/.cache/.wasm-pack/wasm-opt-1ceaaea8b7b5f7e0/bin/wasm-opt" "/tmp/gh-issue-solver-1778220706864/site/public/pkg/doublets_web_bg.wasm" "-o" "/tmp/gh-issue-solver-1778220706864/site/public/pkg/doublets_web_bg.wasm-opt.wasm" "-O"
+[INFO  wasm_pack::command::build] Wrote a package.json at "/tmp/gh-issue-solver-1778220706864/site/public/pkg/package.json".
+[INFO  wasm_pack::command::build] Copying readme from crate...
+[INFO  wasm_pack::command::build] Copied readme from crate to "/tmp/gh-issue-solver-1778220706864/site/public/pkg".
+[INFO  wasm_pack::command::build] Copying license from crate...
+[INFO  wasm_pack::command::build] Copied license from crate to "/tmp/gh-issue-solver-1778220706864/site/public/pkg".
+[INFO  wasm_pack::command::build] Done in 12.04s.
+[INFO  wasm_pack::command::build] Your wasm pkg is ready to publish at /tmp/gh-issue-solver-1778220706864/site/public/pkg.
+[INFO]: ✨   Done in 12.04s
+[INFO]: 📦   Your wasm pkg is ready to publish at /tmp/gh-issue-solver-1778220706864/site/public/pkg.

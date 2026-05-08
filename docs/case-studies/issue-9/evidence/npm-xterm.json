@@ -1,0 +1,8 @@
+{
+  "name": "@xterm/xterm",
+  "version": "6.0.0",
+  "description": "Full xterm terminal, in your browser",
+  "homepage": "https://github.com/xtermjs/xterm.js#readme",
+  "repository.url": "git+https://github.com/xtermjs/xterm.js.git",
+  "license": "MIT"
+}
