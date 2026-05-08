@@ -31,7 +31,7 @@
     "hello-wasm-pack": "^0.1.0",
     "webpack": "^5.106.2",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^5.2.3"
   },
   "dependencies": {
     "doublets-web": "^0.1.0-beta.3"
