@@ -4,6 +4,7 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import tomllib
 import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
@@ -60,7 +61,8 @@ class CratePublishTest(unittest.TestCase):
         with patch.object(crate_publish, "needs_publish", return_value=False) as decision:
             with patch("sys.stdout", new_callable=io.StringIO) as output:
                 crate_publish.main()
-            decision.assert_called_once_with("0.1.3")
+            package = tomllib.loads((SCRIPT.parents[2] / "Cargo.toml").read_text())["package"]
+            decision.assert_called_once_with(package["version"])
             self.assertEqual(output.getvalue(), "publish=false\n")
 
 
