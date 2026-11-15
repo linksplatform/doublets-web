@@ -4,6 +4,7 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import re
 import tomllib
 import unittest
 from unittest.mock import patch
@@ -64,6 +65,17 @@ class CratePublishTest(unittest.TestCase):
             package = tomllib.loads((SCRIPT.parents[2] / "Cargo.toml").read_text())["package"]
             decision.assert_called_once_with(package["version"])
             self.assertEqual(output.getvalue(), "publish=false\n")
+
+
+class PublishWorkflowTest(unittest.TestCase):
+    def test_only_one_job_can_upload_the_rust_crate(self):
+        workflow = (SCRIPT.parents[1] / "workflows/release.yml").read_text()
+        # Job headers have exactly two spaces; avoid matching steps or env keys.
+        jobs = re.split(r"(?m)^  ([\w-]+):\s*$", workflow)[1:]
+        upload_jobs = [name for name, body in zip(jobs[::2], jobs[1::2])
+                       if re.search(r"cargo publish(?! --dry-run)", body)]
+        self.assertEqual(upload_jobs, ["publish-crate"],
+                         "Duplicate publishers can race or bypass verification")
 
 
 if __name__ == "__main__":
