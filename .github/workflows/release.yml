@@ -13,13 +13,31 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.ref == 'refs/heads/master' }}
+  cancel-in-progress: false
 
 env:
   CARGO_TERM_COLOR: always
   RUSTFLAGS: -Dwarnings
 
 jobs:
+  crate-package:
+    name: Verify crates.io Package
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Test crates.io release decisions
+        run: python3 -m unittest discover -s tests -p 'test_crate_publish.py' -v
+
+      - name: Verify publishable Rust package without credentials
+        run: cargo publish --dry-run --locked --package doublets-web --registry crates-io
+
   verify:
     name: Verify (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
@@ -113,6 +131,43 @@ jobs:
 
       - name: Build GitHub Pages demo
         run: npm run build --prefix site
+
+  publish-crate:
+    name: Publish crates.io Package
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [verify, wasm-package, crate-package]
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
+    permissions:
+      contents: read
+      id-token: write
+    # Serialize publishes; never cancel a publish while it is in flight.
+    concurrency:
+      group: crates-io-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Check crates.io version
+        id: version
+        run: python3 .github/scripts/crate_publish.py >> "$GITHUB_OUTPUT"
+
+      # Authenticate even on a no-op release, so missing publisher configuration
+      # fails explicitly on master instead of hiding behind an existing version.
+      - name: Authenticate with crates.io trusted publishing
+        id: auth
+        uses: rust-lang/crates-io-auth-action@3268eb413133e2960fa4ae0e963ca76380c54cd9 # v1.0.6
+
+      - name: Publish Rust crate
+        if: steps.version.outputs.publish == 'true'
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
+        run: cargo publish --locked --package doublets-web --registry crates-io
 
   release:
     name: Publish npm Package
