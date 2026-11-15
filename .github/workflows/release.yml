@@ -203,3 +203,51 @@ jobs:
           else
             gh release create "${TAG}" --title "doublets-web ${VERSION}" --notes-file "${NOTES}" --target "${GITHUB_SHA}"
           fi
+
+  prm-publish-crates-io-1:
+    if: (github.event_name == 'release' || ((github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)))
+    concurrency:
+      group: prm-publish-crates-io-1-${{ github.ref }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+    defaults:
+      run:
+        working-directory: '.'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Check exact registry version
+        id: version-check
+        run: |
+          python3 - <<'PY'
+          import json, os, time, tomllib, urllib.request, urllib.error, urllib.parse
+          metadata = tomllib.load(open("Cargo.toml", "rb"))["package"]
+          name, version = metadata["name"], metadata["version"]
+          expected = os.environ.get("RELEASE_VERSION", "").removeprefix("v")
+          if expected and version != expected: raise SystemExit("Checkout version does not match release output")
+          url = "https://crates.io/api/v1/crates/" + urllib.parse.quote(name, safe="") + "/" + version + "?_=" + str(time.time_ns())
+          request = urllib.request.Request(url, headers={"Cache-Control": "no-cache, no-store", "User-Agent": "package-registry-manager", "Accept": "application/json"})
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  json.load(response)
+              publish = False
+          except urllib.error.HTTPError as error:
+              if error.code != 404: raise
+              publish = True
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("publish=" + str(publish).lower() + "\n")
+          PY
+      - uses: rust-lang/crates-io-auth-action@c6f97d42243bad5fab37ca0427f495c86d5b1a18 # v1.0.5
+        continue-on-error: true
+        if: steps.version-check.outputs.publish == 'true'
+        id: auth
+      - run: cargo publish
+        if: steps.version-check.outputs.publish == 'true'
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token || secrets.CARGO_REGISTRY_TOKEN || secrets.CARGO_TOKEN }}
