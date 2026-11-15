@@ -33,7 +33,7 @@ jobs:
           targets: wasm32-unknown-unknown
 
       - name: Test crates.io release decisions
-        run: python3 -m unittest discover -s tests -p 'test_crate_publish.py' -v
+        run: python3 -B -m unittest discover -s tests -p 'test_crate_publish.py' -v
 
       - name: Verify publishable Rust package without credentials
         run: cargo publish --dry-run --locked --package doublets-web --registry crates-io
