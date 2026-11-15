@@ -129,7 +129,7 @@ impl LinksConstants {
 
     #[allow(clippy::should_implement_trait)]
     pub fn clone(&self) -> Self {
-        Clone::clone(self)
+        *self
     }
 }
 
